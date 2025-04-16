@@ -103,6 +103,8 @@ This looks a little wired😅. We empirically find this is necessary sometimes (
 
 So, we directly delete this folder (of course we cannot delete other files -- this is only effective to delete our ray cache and `/tmp/ray/ray_current_cluster`)
 
+See [this issue](https://github.com/UCSB-NLP-Chang/ThinkPrune/issues/2) for a more elegant solution.
+
 4. choose the model and length limit
 
 ```
