@@ -71,12 +71,6 @@ SOURCE_TO_SCORE_FN = {
     "kk_logic": kklogic.compute_score,
 }
 
-SOURCE_TO_SCORE_FN_WITH_FORMAT = {
-    "openai/gsm8k": gsm8k.compute_score,
-    "math": qwen_math.compute_score_r1,
-    "code": code.compute_score,
-}
-
 
 class RewardManager:
     """The reward manager."""
@@ -146,8 +140,6 @@ class RewardManager:
 
                     if self.score_fn_strategy == "default":
                         compute_score_fn = SOURCE_TO_SCORE_FN[data_source]
-                    elif self.score_fn_strategy == "with_format":
-                        compute_score_fn = SOURCE_TO_SCORE_FN_WITH_FORMAT[data_source]
                     else:
                         raise ValueError()
 
